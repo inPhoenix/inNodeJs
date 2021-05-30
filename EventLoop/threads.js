@@ -13,3 +13,4 @@ crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
 
 // they are going to run in paralell
 // if it was a single thread we should see one after another with the duplicated time
+// Understanding that this is due to the computer that is allowed to run it in parallel
