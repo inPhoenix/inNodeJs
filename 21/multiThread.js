@@ -9,7 +9,7 @@ function doRequest() {
       res.on("data", () => {});
       res.on("end", () => {
         ``;
-        console.log(Date.now() - start);
+        console.log('doRequest', Date.now() - start);
       });
     })
     .end();
@@ -20,3 +20,15 @@ function doHash() {
     console.log("%c Hash:", "background: red", Date.now() - start);
   });
 }
+
+doRequest(); //http request to google // 1
+
+fs.readFile('multitask.js', 'utf8', () => { // 2
+    console.log('readfile', Date.now() - start )
+})
+// 3
+
+doHash()
+doHash()
+doHash()
+doHash()
