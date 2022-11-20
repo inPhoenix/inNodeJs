@@ -4,7 +4,7 @@
 
 
 ## The stack
-- [ ] NodeJs
+- [x] NodeJs
 
 
 Notes:
